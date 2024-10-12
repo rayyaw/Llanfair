@@ -1,9 +1,5 @@
 # Llanfair
 
-**This project is not maintained anymore. I have not speedrun anything in over a year, and while I once thought I might come back to it again, that is highly unlikely to be the case anymore.**
-
----
-
 [From the homepage](http://jenmaarai.com/llanfair/en/):
 
 > Llanfair is a free software that helps speedrunners keep track of their run. Released in August 2012, its capacity for customization and its portability allowed it to garner some recognition in the scene. Developed in Java, Llanfair can run on Windows, MacOS, or Unix.
@@ -96,17 +92,3 @@ $ gradle shadowJar
 Which will spit out an "uber JAR" under `build/libs` under the naming convention `llanfair-[VERSION]-all.jar`. This
 JAR will of course work on any OS and includes all required dependencies inside it.
 
-To build a redistributable Mac app bundle (.app):
-
-```
-$ gradle createApp
-```
-
-Which will create an app bundle under `build/macApp`.
-
-## TODO
-
-* Bug fixing
-* Some UI cleanups, especially in the Edit Run dialog and Settings dialog.
-* Even more font/color customization options?
-* ...
