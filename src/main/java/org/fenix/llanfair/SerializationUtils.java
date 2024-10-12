@@ -6,6 +6,8 @@ import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.security.WildcardTypePermission;
+
 import org.fenix.llanfair.config.Accuracy;
 import org.fenix.llanfair.config.Compare;
 import org.fenix.llanfair.config.Merge;
@@ -33,6 +35,11 @@ public class SerializationUtils {
 
 		xml.registerConverter(new FontConverter());
 		xml.registerConverter(new ImageIconConverter());
+
+		xml.addPermission(new WildcardTypePermission(new String[] {
+			"org.fenix.utils.config.*",
+			"java.awt.*",
+		}));
 	}
 
 	@SuppressWarnings("unchecked")

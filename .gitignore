@@ -2,9 +2,11 @@
 .idea/
 .settings/
 .gradle/
+.vscode/
 target/
 out/
 build/
+bin/
 classes/
 .project
 .classpath
